@@ -1,0 +1,28 @@
+name: cosine_with_filter
+description: |
+  Subworkflow que permite ejecutar el módulo de similitud de coseno sobre una matriz de expresión
+  opcionalmente filtrada mediante el módulo custom_matrixfilter de nf-core.
+keywords:
+  - cosine
+  - similarity
+  - expression
+  - matrixfilter
+  - rna-seq
+modules:
+  - nf-core/custom_matrixfilter
+  - compute_cosine
+input:
+  - expr_file:
+      type: file
+      description: Matriz de expresión CSV/TSV (entrada directa o salida de custom_matrixfilter)
+output:
+  - cosine_matrix:
+      type: file
+      description: Matriz de similitud exportada (CSV)
+  - heatmap:
+      type: file
+      description: Figura de correlación entre muestras (PNG o HTML)
+parameters:
+  - use_matrixfilter:
+      type: boolean
+      description: Si es true, ejecuta el módulo custom_matrixfilter antes del cálculo de similitud.
