@@ -1,0 +1,36 @@
+name: compute_similarity
+maintainers:
+  - name: Miguel Rosell Hidalgo
+    email: miguelnorty@gmail.com
+summary: Compute pairwise similarity between samples from an expression matrix (cosine, pearson, spearman) and produce a CSV + heatmap.
+description: |
+  Small reusable module that computes pairwise sample-sample similarity from an expression matrix.
+  It accepts a generic expression matrix (genes x samples) and produces:
+  - a similarity matrix CSV (samples x samples)
+  - a heatmap PNG
+  The module is intended to be used downstream of matrix filtering / normalization steps
+  (for example nf-core/rnaseq outputs or nf-core/differentialabundance/custom_matrixfilter).
+inputs:
+  expression_matrix:
+    type: file
+    description: Input expression matrix (CSV/TSV/XLSX). First column can be gene IDs and subsequent columns samples.
+params:
+  method:
+    type: string
+    default: cosine
+    description: Similarity metric to compute (cosine, pearson, spearman)
+  min_gene_mean:
+    type: number
+    default: 0.0
+    description: Minimum mean expression across samples to keep genes (optional).
+  sample_cols:
+    type: string
+    default: auto
+    description: Comma-separated sample column names or 'auto' to detect numeric columns.
+outputs:
+  similarity_matrix:
+    type: file
+    description: CSV file with pairwise similarity (samples x samples)
+  heatmap:
+    type: file
+    description: Heatmap visualization (PNG)
