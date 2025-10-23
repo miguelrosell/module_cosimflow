@@ -2,13 +2,12 @@ nextflow.enable.dsl=2
 
 process compute_similarity_process {
     tag { expression_matrix.baseName }
-conda "${moduleDir}/environment.yml"
 
     // publish results to top-level results/ by default (or params.outdir)
     publishDir "${params.outdir ?: './results'}", mode: 'copy'
 
     // reproducible environment
-    conda "${projectDir}/envs/r_env.yml"
+    conda "${moduleDir}/environment.yml"
 
     input:
     path expression_matrix
