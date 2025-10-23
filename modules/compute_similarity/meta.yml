@@ -11,7 +11,7 @@ description: |
   The module is intended to be used downstream of matrix filtering / normalization steps
   (for example nf-core/rnaseq outputs or nf-core/differentialabundance/custom_matrixfilter).
 inputs:
-  expression_matrix:
+  expression_matrix_ch:
     type: file
     description: Input expression matrix (CSV/TSV/XLSX). First column can be gene IDs and subsequent columns samples.
 params:
