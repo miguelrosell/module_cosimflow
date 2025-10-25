@@ -1,6 +1,6 @@
 nextflow.enable.dsl=2
 
-process compute_similarity_process {
+process COMPUTE_SIMILARITY_PROCESS {
     tag { expression_matrix.baseName }
 
     // reproducible environment
@@ -28,14 +28,14 @@ process compute_similarity_process {
     """
 }
 
-workflow compute_similarity {
+workflow COMPUTE_SIMILARITY {
     take:
     expression_matrix_ch
 
     main:
-    compute_similarity_process(expression_matrix_ch)
+    COMPUTE_SIMILARITY_PROCESS(expression_matrix_ch)
 
     emit:
-    similarity_matrix = compute_similarity_process.out.similarity_matrix
-    heatmap = compute_similarity_process.out.heatmap
+    similarity_matrix = COMPUTE_SIMILARITY_PROCESS.out.similarity_matrix
+    heatmap = COMPUTE_SIMILARITY_PROCESS.out.heatmap
 }

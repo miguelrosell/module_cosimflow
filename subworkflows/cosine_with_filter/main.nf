@@ -1,14 +1,14 @@
 nextflow.enable.dsl=2
 
-include { custom_matrixfilter } from 'nf-core/modules/custom_matrixfilter'
-include { compute_cosine } from '../../modules/compute_cosine/main.nf'
+include { CUSTOM_MATRIXFILTER } from '../../modules/nf-core/custom_matrixfilter'
+include { COMPUTE_SIMILARITY } from '../../modules/local/compute_similarity/main.nf'
 
-workflow cosine_with_filter {
+workflow COSINE_WITH_FILTER {
     take:
         expr_file
     main:
-        filtered_expr = (params.use_matrixfilter ? custom_matrixfilter(expr_file).filtered_matrix : expr_file)
-        cosine_result = compute_cosine(filtered_expr)
+        filtered_expr = (params.use_matrixfilter ? CUSTOM_MATRIXFILTER(expr_file).filtered_matrix : expr_file)
+        cosine_result = COMPUTE_SIMILARITY(filtered_expr)
     emit:
         cosine_result.out_cosine_matrix
         cosine_result.out_heatmap

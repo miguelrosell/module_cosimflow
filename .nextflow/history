@@ -1,0 +1,7 @@
+2025-10-25 19:17:03	-	high_ptolemy	-	9739e6159724767ef097f652af003f3e	6e29cceb-bfe3-4d54-90cd-2e222434af49	nextflow run subworkflows/cosine_with_filter/main.nf -profile test
+2025-10-25 19:22:25	-	chaotic_goldstine	-	970c96fc4936e5db016621539db34433	3cecb3ef-7520-4f0e-9e1d-36bb3e3557b8	nextflow run subworkflows/cosine_with_filter/main.nf -profile test
+2025-10-25 19:24:51	-	agitated_ampere	-	7d33eb6d8e73ff84babc246222d8d7b2	4aeaaa57-8dc0-469c-99c9-f46e6edc823a	nextflow run subworkflows/cosine_with_filter/main.nf -profile test
+2025-10-25 19:28:04	-	grave_carlsson	-	2ed459a9ee54651df9400c6016aff23c	4393738d-f5ac-41f0-8ce7-976f141deef5	nextflow run subworkflows/cosine_with_filter/main.nf -profile test
+2025-10-25 19:46:44	-	curious_faraday	-	2e75f3d167d312c0273d1ebb607fa7bc	e804927a-16e6-47da-b238-05b506b3cf62	nextflow run subworkflows/cosine_with_filter/main.nf -profile test
+2025-10-25 19:48:28	-	special_wegener	-	2e75f3d167d312c0273d1ebb607fa7bc	5cadf7d7-440a-4856-ac12-a9c3b063d0d1	nextflow run subworkflows/cosine_with_filter/main.nf -entry COSINE_WITH_FILTER -profile test
+2025-10-25 19:51:10	-	sick_leakey	-	76f6b65a20000b44ef5559814301cad9	24020306-f9d7-4cde-bd4f-1c237aba98de	nextflow run tests/test_cosine_with_filter.nf -profile test

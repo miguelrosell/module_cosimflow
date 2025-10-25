@@ -1,0 +1,59 @@
+oct-25 19:17:02.304 [main] DEBUG nextflow.cli.Launcher - $> nextflow run subworkflows/cosine_with_filter/main.nf -profile test
+oct-25 19:17:02.372 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.7
+oct-25 19:17:02.401 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/miguelito/.nextflow/plugins; core-plugins: nf-amazon@2.15.0-patch1,nf-azure@1.16.0-patch1,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4-patch1,nf-wave@1.12.1
+oct-25 19:17:02.424 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+oct-25 19:17:02.424 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+oct-25 19:17:02.427 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+oct-25 19:17:02.435 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+oct-25 19:17:02.456 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/miguelito/Documentos/module_cosimflow/nextflow.config
+oct-25 19:17:02.459 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/miguelito/Documentos/module_cosimflow/nextflow.config
+oct-25 19:17:02.494 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/miguelito/.nextflow/secrets/store.json
+oct-25 19:17:02.497 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@6b3871d6] - activable => nextflow.secret.LocalSecretsProvider@6b3871d6
+oct-25 19:17:02.502 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test`
+oct-25 19:17:02.923 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, test, conda, docker]
+oct-25 19:17:02.956 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+oct-25 19:17:02.971 [main] DEBUG nextflow.cli.CmdRun - Launching `subworkflows/cosine_with_filter/main.nf` [high_ptolemy] DSL2 - revision: 9739e61597
+oct-25 19:17:02.973 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+oct-25 19:17:02.973 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+oct-25 19:17:03.024 [main] DEBUG nextflow.Session - Session UUID: 6e29cceb-bfe3-4d54-90cd-2e222434af49
+oct-25 19:17:03.025 [main] DEBUG nextflow.Session - Run name: high_ptolemy
+oct-25 19:17:03.025 [main] DEBUG nextflow.Session - Executor pool size: 8
+oct-25 19:17:03.034 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+oct-25 19:17:03.041 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+oct-25 19:17:03.068 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.7 build 5955
+  Created: 08-09-2025 13:29 UTC (15:29 CEST)
+  System: Linux 6.14.0-33-generic
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 21.0.6+9-b895.97
+  Encoding: UTF-8 (UTF-8)
+  Process: 16159@miguelito-ASUS-TUF-Dash-F15-FX516PR-FX516PR [127.0.1.1]
+  CPUs: 8 - Mem: 15.3 GB (3.4 GB) - Swap: 4 GB (3.9 GB)
+oct-25 19:17:03.093 [main] DEBUG nextflow.Session - Work-dir: /home/miguelito/Documentos/module_cosimflow/work [ext2/ext3]
+oct-25 19:17:03.094 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/miguelito/Documentos/module_cosimflow/subworkflows/cosine_with_filter/bin
+oct-25 19:17:03.108 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+oct-25 19:17:03.120 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+oct-25 19:17:03.126 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+oct-25 19:17:03.153 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+oct-25 19:17:03.163 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+oct-25 19:17:03.216 [main] DEBUG nextflow.Session - Session start
+oct-25 19:17:03.375 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+oct-25 19:17:03.388 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_9bd76acd1be5d77e: /home/miguelito/Documentos/module_cosimflow/subworkflows/cosine_with_filter/main.nf
+oct-25 19:17:03.388 [main] DEBUG nextflow.Session - Session aborted -- Cause: Module path must start with / or ./ prefix -- Offending module: nf-core/modules/custom_matrixfilter
+oct-25 19:17:03.396 [main] ERROR nextflow.cli.Launcher - @unknown
+nextflow.exception.IllegalModulePath: Module path must start with / or ./ prefix -- Offending module: nf-core/modules/custom_matrixfilter
+	at nextflow.script.IncludeDef.checkValidPath(IncludeDef.groovy:221)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:103)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_9bd76acd1be5d77e.runScript(Script_9bd76acd1be5d77e:3)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:159)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:193)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:246)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:139)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)

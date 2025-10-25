@@ -1,0 +1,8 @@
+repository_type: pipeline
+org_path: nf-core
+manifest:
+  name: module_cosimflow
+  description: "A Nextflow subworkflow/module for cosine similarity analysis integrating optional matrix filtering."
+  author: "Miguel"
+  version: "1.0.0"
+
