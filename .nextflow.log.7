@@ -1,0 +1,97 @@
+oct-25 20:21:47.948 [main] DEBUG nextflow.cli.Launcher - $> nextflow run tests/test_cosine_with_filter.nf -profile test
+oct-25 20:21:48.024 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.7
+oct-25 20:21:48.040 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/miguelito/.nextflow/plugins; core-plugins: nf-amazon@2.15.0-patch1,nf-azure@1.16.0-patch1,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4-patch1,nf-wave@1.12.1
+oct-25 20:21:48.061 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+oct-25 20:21:48.062 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+oct-25 20:21:48.064 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+oct-25 20:21:48.072 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+oct-25 20:21:48.088 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/miguelito/Documentos/module_cosimflow/nextflow.config
+oct-25 20:21:48.091 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/miguelito/Documentos/module_cosimflow/nextflow.config
+oct-25 20:21:48.117 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/miguelito/.nextflow/secrets/store.json
+oct-25 20:21:48.120 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@57b9e423] - activable => nextflow.secret.LocalSecretsProvider@57b9e423
+oct-25 20:21:48.125 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test`
+oct-25 20:21:48.541 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, test, conda, docker]
+oct-25 20:21:48.564 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+oct-25 20:21:48.573 [main] DEBUG nextflow.cli.CmdRun - Launching `tests/test_cosine_with_filter.nf` [adoring_albattani] DSL2 - revision: 4413b5f05f
+oct-25 20:21:48.574 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+oct-25 20:21:48.574 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+oct-25 20:21:48.619 [main] DEBUG nextflow.Session - Session UUID: a9d75f74-ca2e-4e77-ab5f-f570126521e2
+oct-25 20:21:48.619 [main] DEBUG nextflow.Session - Run name: adoring_albattani
+oct-25 20:21:48.619 [main] DEBUG nextflow.Session - Executor pool size: 8
+oct-25 20:21:48.626 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+oct-25 20:21:48.632 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+oct-25 20:21:48.657 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.7 build 5955
+  Created: 08-09-2025 13:29 UTC (15:29 CEST)
+  System: Linux 6.14.0-33-generic
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 21.0.6+9-b895.97
+  Encoding: UTF-8 (UTF-8)
+  Process: 21534@miguelito-ASUS-TUF-Dash-F15-FX516PR-FX516PR [127.0.1.1]
+  CPUs: 8 - Mem: 15.3 GB (2.4 GB) - Swap: 4 GB (3.9 GB)
+oct-25 20:21:48.681 [main] DEBUG nextflow.Session - Work-dir: /home/miguelito/Documentos/module_cosimflow/work [ext2/ext3]
+oct-25 20:21:48.682 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/miguelito/Documentos/module_cosimflow/tests/bin
+oct-25 20:21:48.691 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+oct-25 20:21:48.700 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+oct-25 20:21:48.704 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+oct-25 20:21:48.731 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+oct-25 20:21:48.742 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+oct-25 20:21:48.788 [main] DEBUG nextflow.Session - Session start
+oct-25 20:21:48.905 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+oct-25 20:21:49.282 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+oct-25 20:21:49.282 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+oct-25 20:21:49.288 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+oct-25 20:21:49.295 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=15.3 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+oct-25 20:21:49.297 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+oct-25 20:21:49.319 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'COSINE_WITH_FILTER:COMPUTE_SIMILARITY:COMPUTE_SIMILARITY_PROCESS': maxForks=0; fair=false; array=0
+oct-25 20:21:49.371 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CUSTOM_MATRIXFILTER, COSINE_WITH_FILTER:COMPUTE_SIMILARITY:COMPUTE_SIMILARITY_PROCESS, COMPUTE_SIMILARITY_PROCESS
+oct-25 20:21:49.373 [main] DEBUG nextflow.Session - Igniting dataflow network (2)
+oct-25 20:21:49.379 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > COSINE_WITH_FILTER:COMPUTE_SIMILARITY:COMPUTE_SIMILARITY_PROCESS
+oct-25 20:21:49.380 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_4613db7f501ba69b: /home/miguelito/Documentos/module_cosimflow/modules/local/compute_similarity/main.nf
+  Script_e003fbca6baa0f41: /home/miguelito/Documentos/module_cosimflow/tests/test_cosine_with_filter.nf
+  Script_d7b3449636279eff: /home/miguelito/Documentos/module_cosimflow/modules/nf-core/custom_matrixfilter/main.nf
+  Script_6143e1ef489b6968: /home/miguelito/Documentos/module_cosimflow/subworkflows/cosine_with_filter/main.nf
+oct-25 20:21:49.381 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+oct-25 20:21:49.381 [main] DEBUG nextflow.Session - Session await
+oct-25 20:21:49.544 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+oct-25 20:21:49.546 [Task submitter] INFO  nextflow.Session - [b3/3026da] Submitted process > COSINE_WITH_FILTER:COMPUTE_SIMILARITY:COMPUTE_SIMILARITY_PROCESS (test_expression)
+oct-25 20:21:49.598 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: COSINE_WITH_FILTER:COMPUTE_SIMILARITY:COMPUTE_SIMILARITY_PROCESS (test_expression); status: COMPLETED; exit: 2; error: -; workDir: /home/miguelito/Documentos/module_cosimflow/work/b3/3026dab48d2a8b3e8a46d4cdbdfa78]
+oct-25 20:21:49.599 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+oct-25 20:21:49.606 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=COSINE_WITH_FILTER:COMPUTE_SIMILARITY:COMPUTE_SIMILARITY_PROCESS (test_expression); work-dir=/home/miguelito/Documentos/module_cosimflow/work/b3/3026dab48d2a8b3e8a46d4cdbdfa78
+  error [nextflow.exception.ProcessFailedException]: Process `COSINE_WITH_FILTER:COMPUTE_SIMILARITY:COMPUTE_SIMILARITY_PROCESS (test_expression)` terminated with an error exit status (2)
+oct-25 20:21:49.624 [TaskFinalizer-1] ERROR nextflow.processor.TaskProcessor - Error executing process > 'COSINE_WITH_FILTER:COMPUTE_SIMILARITY:COMPUTE_SIMILARITY_PROCESS (test_expression)'
+
+Caused by:
+  Process `COSINE_WITH_FILTER:COMPUTE_SIMILARITY:COMPUTE_SIMILARITY_PROCESS (test_expression)` terminated with an error exit status (2)
+
+
+Command executed:
+
+  Rscript /home/miguelito/Documentos/module_cosimflow/tests/bin/compute_cosine.R \
+      --input test_expression.csv \
+      --out_prefix similarity \
+      --method cosine \
+      --min_gene_mean 0.0 \
+      --sample_cols "auto"
+
+Command exit status:
+  2
+
+Command output:
+  Fatal error: no fue posible abrir el archivo '/home/miguelito/Documentos/module_cosimflow/tests/bin/compute_cosine.R': No existe el archivo o el directorio
+
+Command error:
+  Fatal error: no fue posible abrir el archivo '/home/miguelito/Documentos/module_cosimflow/tests/bin/compute_cosine.R': No existe el archivo o el directorio
+
+Work dir:
+  /home/miguelito/Documentos/module_cosimflow/work/b3/3026dab48d2a8b3e8a46d4cdbdfa78
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+oct-25 20:21:49.630 [TaskFinalizer-1] DEBUG nextflow.Session - Session aborted -- Cause: Process `COSINE_WITH_FILTER:COMPUTE_SIMILARITY:COMPUTE_SIMILARITY_PROCESS (test_expression)` terminated with an error exit status (2)
+oct-25 20:21:49.631 [main] DEBUG nextflow.Session - Session await > all processes finished
+oct-25 20:21:49.646 [main] DEBUG nextflow.Session - Session await > all barriers passed
+oct-25 20:21:49.647 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+oct-25 20:21:49.652 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=18ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+oct-25 20:21:49.874 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+oct-25 20:21:49.900 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

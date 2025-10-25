@@ -16,7 +16,7 @@ input:
       type: file
       description: Matriz de expresión CSV/TSV (entrada directa o salida de custom_matrixfilter)
 output:
-  - cosine_matrix:
+  - similarity_matrix:
       type: file
       description: Matriz de similitud exportada (CSV)
   - heatmap:

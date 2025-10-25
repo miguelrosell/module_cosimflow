@@ -5,3 +5,12 @@
 2025-10-25 19:46:44	-	curious_faraday	-	2e75f3d167d312c0273d1ebb607fa7bc	e804927a-16e6-47da-b238-05b506b3cf62	nextflow run subworkflows/cosine_with_filter/main.nf -profile test
 2025-10-25 19:48:28	-	special_wegener	-	2e75f3d167d312c0273d1ebb607fa7bc	5cadf7d7-440a-4856-ac12-a9c3b063d0d1	nextflow run subworkflows/cosine_with_filter/main.nf -entry COSINE_WITH_FILTER -profile test
 2025-10-25 19:51:10	-	sick_leakey	-	76f6b65a20000b44ef5559814301cad9	24020306-f9d7-4cde-bd4f-1c237aba98de	nextflow run tests/test_cosine_with_filter.nf -profile test
+2025-10-25 20:16:24	-	zen_carson	-	4413b5f05f5eb4165e95ebedd502bb89	0803668a-b800-40fb-8788-61e8916efa9d	nextflow run tests/test_cosine_with_filter.nf -profile test
+2025-10-25 20:21:48	1.9s	adoring_albattani	ERR	4413b5f05f5eb4165e95ebedd502bb89	a9d75f74-ca2e-4e77-ab5f-f570126521e2	nextflow run tests/test_cosine_with_filter.nf -profile test
+2025-10-25 20:40:06	-	magical_heyrovsky	-	4413b5f05f5eb4165e95ebedd502bb89	3caf9b6d-e2f0-4e57-afcd-c1ab8c25ce38	nextflow run tests/test_cosine_with_filter.nf -profile test
+2025-10-25 20:47:22	-	friendly_goldberg	-	4413b5f05f5eb4165e95ebedd502bb89	d17dd7fd-e08d-483a-a467-c732787b9634	nextflow run tests/test_cosine_with_filter.nf -profile test
+2025-10-25 20:58:07	-	awesome_linnaeus	-	4413b5f05f5eb4165e95ebedd502bb89	db558af3-406c-4645-a28a-42883b06918b	nextflow run tests/test_cosine_with_filter.nf -profile test
+2025-10-25 21:07:44	-	fabulous_perlman	-	969304d7a69aeeff7915cb3248c5f72b	08d9ab6c-0d39-4081-976e-4073d57bd2aa	nextflow run tests/test_cosine_with_filter.nf -profile test
+2025-10-25 21:12:05	-	dreamy_swanson	-	c9b86d31bafcb18258410000e5a4990d	0b62125e-199a-4a88-a1d8-2520193929f1	nextflow run tests/test_cosine_with_filter.nf -profile test
+2025-10-25 21:15:38	-	extravagant_volhard	-	c9b86d31bafcb18258410000e5a4990d	a1317b13-02c7-4c64-8719-064b6125bbd0	nextflow run tests/test_cosine_with_filter.nf -profile test
+2025-10-25 21:19:45	-	boring_austin	-	c9b86d31bafcb18258410000e5a4990d	1f5ea48b-e35c-41b6-97bc-3b0f4138227b	nextflow run tests/test_cosine_with_filter.nf -profile test
